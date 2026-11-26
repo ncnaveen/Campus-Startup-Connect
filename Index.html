@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Campus–Startup Connect · Bengaluru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F8FA;--surface:#FFFFFF;--ink:#13233F;--muted:#4C5A72;--line:#D5DCE6;
+  --teal:#0B7A85;--teal-ink:#FFFFFF;--sun:#F5B83D;--sun-ink:#3A2A00;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0F1A2B;--surface:#16243A;--ink:#EAF0F8;--muted:#A9B6CA;--line:#2B3B55;--teal:#3CC4CF;--teal-ink:#06262A;--sun:#F5B83D;--sun-ink:#3A2A00;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0F1A2B;--surface:#16243A;--ink:#EAF0F8;--muted:#A9B6CA;--line:#2B3B55;--teal:#3CC4CF;--teal-ink:#06262A;--sun:#F5B83D;--sun-ink:#3A2A00;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Public Sans",system-ui,sans-serif;line-height:1.1;margin:0;letter-spacing:-.01em}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.brand{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:19px;color:var(--ink);text-decoration:none}
+nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-weight:500;font-size:15px}
+nav a:hover{color:var(--ink)}
+/* hero */
+.hero{padding:34px 0 56px}
+.toggle{display:inline-flex;border:1.5px solid var(--ink);border-radius:999px;padding:4px;background:var(--surface);margin-bottom:28px}
+.toggle button{font:600 15px "Public Sans",sans-serif;border:0;background:transparent;color:var(--ink);padding:9px 18px;border-radius:999px;cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+h1{font-size:clamp(36px,6.4vw,66px);font-weight:800;max-width:15ch}
+.lede{font-size:clamp(18px,2.2vw,21px);color:var(--muted);max-width:56ch;margin:20px 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;font:600 16px "Public Sans",sans-serif;padding:13px 22px;border-radius:10px;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);background:transparent}
+.btn.primary{background:var(--teal);border-color:var(--teal);color:var(--teal-ink)}
+.btn:hover{transform:translateY(-1px)}
+.bridge{margin-top:44px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;max-width:640px}
+.bridge div{border:1.5px solid var(--line);background:var(--surface);border-radius:12px;padding:14px 16px;font-size:15px}
+.bridge b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:18px}
+.bridge i{height:4px;width:70px;background:linear-gradient(90deg,var(--teal),var(--sun));border-radius:4px;display:block}
+@media (max-width:560px){.bridge{grid-template-columns:1fr;}.bridge i{width:4px;height:28px;margin:0 auto}}
+/* sections */
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(28px,4vw,40px);font-weight:700;max-width:22ch}
+.sub{color:var(--muted);max-width:60ch;margin:14px 0 30px}
+.types{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));column-gap:44px}
+.types li{padding:18px 0;border-bottom:1px solid var(--line)}
+.types h3{font-size:20px;margin-bottom:6px}
+.types p{margin:0;color:var(--muted);font-size:16px}
+.steps{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;gap:18px;max-width:720px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.steps li::before{content:counter(s);width:36px;height:36px;border-radius:50%;background:var(--sun);color:var(--sun-ink);font:700 17px "Bricolage Grotesque",sans-serif;display:grid;place-items:center}
+.steps b{font-family:"Bricolage Grotesque",sans-serif;font-size:19px;display:block}
+.steps span{color:var(--muted)}
+.feature{background:var(--surface);border:1.5px solid var(--line);border-radius:16px;padding:28px;display:grid;gap:18px;grid-template-columns:1.2fr 1fr;align-items:center}
+@media (max-width:720px){.feature{grid-template-columns:1fr}}
+.report{border:1.5px dashed var(--teal);border-radius:12px;padding:16px;font-size:14.5px;color:var(--muted)}
+.report b{color:var(--ink)}
+.report div{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px solid var(--line)}
+.report div:last-child{border-bottom:0}
+.join{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:720px){.join{grid-template-columns:1fr}}
+.join .box{background:var(--surface);border:1.5px solid var(--line);border-radius:16px;padding:24px}
+.join h3{font-size:22px;margin-bottom:8px}
+.join p{color:var(--muted);margin:0 0 18px}
+footer{padding:34px 0 46px;border-top:1px solid var(--line);color:var(--muted);font-size:14.5px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="#top">Campus–Startup Connect</a>
+    <nav aria-label="Main"><a href="#what">What we do</a><a href="#how">How it works</a><a href="#join">Join the pilot</a></nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div class="toggle" role="group" aria-label="Choose your side">
+        <button type="button" id="b-inst" aria-pressed="true">I’m an institution</button>
+        <button type="button" id="b-start" aria-pressed="false">I’m a startup</button>
+      </div>
+      <h1 id="h">Set up a Centre of Excellence that keeps running.</h1>
+      <p class="lede" id="l">Find credible Bengaluru startups for CoEs, live projects, guest lectures and internships, with ready agreements and a record of outcomes you can use for NBA and NAAC.</p>
+      <div class="cta">
+        <a class="btn primary" id="c1" href="#join">Join the pilot</a>
+        <a class="btn" href="#how">See how it works</a>
+      </div>
+      <div class="bridge" aria-hidden="true">
+        <div><b>Campuses</b>Faculty, labs, students</div><i></i><div><b>Startups</b>Products, problems, projects</div>
+      </div>
+    </div>
+  </main>
+
+  <section id="what">
+    <h2>Six ways to work together</h2>
+    <p class="sub">Most portals cover one kind of collaboration. Here, each one starts from the same profile and the same set of templates.</p>
+    <ul class="types">
+      <li><h3>Centres of Excellence</h3><p>A blueprint covering objectives, equipment, curriculum, staffing and a three-year plan, with partners to build it.</p></li>
+      <li><h3>Course and lecture delivery</h3><p>Self-study, partial-delivery and skill-enhancement courses from startups, mapped to your syllabus.</p></li>
+      <li><h3>Internships and live projects</h3><p>Startups post the skills they need. Departments shortlist students and track credits and feedback.</p></li>
+      <li><h3>Sponsored projects</h3><p>Startups bring a problem, faculty bring the method, and the agreement settles IP and fees up front.</p></li>
+      <li><h3>Faculty consulting</h3><p>Short advisory roles for faculty with clear conflict-of-interest and IP rules.</p></li>
+      <li><h3>Lab and facility access</h3><p>Startups use campus labs, and campuses see who is using what.</p></li>
+    </ul>
+  </section>
+
+  <section id="how">
+    <h2>From first introduction to a finished engagement</h2>
+    <p class="sub">We match by hand during the pilot, so every introduction is checked before anyone’s time is spent.</p>
+    <ol class="steps">
+      <li><div><b>Create a profile</b><span>Tell us your domain, needs and capacity. We verify it.</span></div></li>
+      <li><div><b>Get matched</b><span>We shortlist partners that fit your curriculum or product area.</span></div></li>
+      <li><div><b>Sign the template</b><span>Use a standard MoU, course agreement or internship agreement.</span></div></li>
+      <li><div><b>Run and record</b><span>Track milestones, hours and student numbers in one place.</span></div></li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="feature">
+      <div>
+        <h2>Evidence your accreditation team can use</h2>
+        <p class="sub" style="margin-bottom:0">Every engagement leaves a record. Export it as a report for NBA, NAAC or IEI documentation instead of rebuilding it from emails each year.</p>
+      </div>
+      <div class="report" aria-label="Example report fields">
+        <b>Example report fields</b>
+        <div><span>Partner</span><span>Name, type, date</span></div>
+        <div><span>Activity</span><span>CoE, course, project</span></div>
+        <div><span>Hours delivered</span><span>From the tracker</span></div>
+        <div><span>Students reached</span><span>From attendance</span></div>
+        <div><span>Outcome</span><span>Feedback and results</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="join">
+    <h2>Join the Bengaluru pilot</h2>
+    <p class="sub">We are starting with a small group of institutions and startups in AI/ML, cyber security and IoT. Tell us what you need and we will reply personally.</p>
+    <div class="join">
+      <div class="box"><h3>Institutions</h3><p>Principals, deans, HoDs and faculty coordinators.</p><a class="btn primary" id="f-inst" href="https://forms.google.com/" target="_blank" rel="noopener">Register your institution</a></div>
+      <div class="box"><h3>Startups</h3><p>Founders and teams looking for talent, projects or a channel to colleges.</p><a class="btn primary" id="f-start" href="https://forms.google.com/" target="_blank" rel="noopener">Register your startup</a></div>
+    </div>
+  </section>
+
+  <footer>
+    Campus–Startup Connect is a working name. This pilot page is run by Dr. Naveen N.C., Bengaluru.
+  </footer>
+</div>
+
+<script>
+(function(){
+  var copy={
+    inst:{h:"Set up a Centre of Excellence that keeps running.",l:"Find credible Bengaluru startups for CoEs, live projects, guest lectures and internships, with ready agreements and a record of outcomes you can use for NBA and NAAC.",c:"Join as an institution",t:"#f-inst"},
+    start:{h:"Reach the right colleges without cold calling.",l:"Offer courses, hire interns, test products and run sponsored projects with verified Bengaluru institutions, using standard agreements that save weeks of back and forth.",c:"Join as a startup",t:"#f-start"}
+  };
+  var bi=document.getElementById("b-inst"),bs=document.getElementById("b-start");
+  function set(k){
+    var d=copy[k];
+    document.getElementById("h").textContent=d.h;
+    document.getElementById("l").textContent=d.l;
+    var c=document.getElementById("c1");c.textContent=d.c;c.setAttribute("href",d.t);
+    bi.setAttribute("aria-pressed",k==="inst");bs.setAttribute("aria-pressed",k==="start");
+  }
+  bi.addEventListener("click",function(){set("inst")});
+  bs.addEventListener("click",function(){set("start")});
+})();
+</script>
+</body>
+</html>
